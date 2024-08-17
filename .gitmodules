@@ -1,0 +1,3 @@
+[submodule "dragonblade316.nvim"]
+	path = dragonblade316.nvim
+	url = git@github.com:dragonblade316/dragonblade316.nvim.git
