@@ -64,7 +64,7 @@ format = "via [ $version](bold green) "
 disabled = true
 
 [rust]
-format = """via ["" $version $toolchain](red bold)"""
+format = """via ["" $version $toolchain](red bold) """
 
 [c]
 symbol = "C/C++ "
@@ -77,4 +77,5 @@ format = '[$symbol$percentage]\n($style) '
 format = '[$symbol$number]($style) '
 disabled = true
 
-
+[container]
+ format = '[$symbol \[$name\]]($style) '
