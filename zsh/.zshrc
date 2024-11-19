@@ -124,6 +124,9 @@ add-compile-commands() {
 }
 alias add_ros_compile_commands="add-compile-commands"
 
+echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
 eval "$(starship init zsh)"
 
 
+eval "$(zellij setup --generate-auto-start zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"
