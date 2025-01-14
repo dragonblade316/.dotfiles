@@ -108,11 +108,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+
 export CC=clang
 export CXX=clang++
 export CLANG_BASE="--build-base build_clang --install-base install_clang"
 
-export BUILD_ARGS="--symlink-install ${CLANG_BASE} --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+export OLD_BUILD_ARGS="--symlink-install ${CLANG_BASE} --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+export BUILD_ARGS="--symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 alias cb="colcon build ${BUILD_ARGS}"
 add-compile-commands() {
     dest_dir=$(find src -name "${1}" -type d -print -quit)
@@ -124,9 +128,13 @@ add-compile-commands() {
 }
 alias add_ros_compile_commands="add-compile-commands"
 
-echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
+alias cd=z
+alias home=cd $home
+
+
+eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
-
-eval "$(zellij setup --generate-auto-start zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
+# Created by `pipx` on 2024-12-21 04:58:42
+export PATH="$PATH:/home/dragonblade316/.local/bin"
