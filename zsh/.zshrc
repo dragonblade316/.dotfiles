@@ -106,7 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+
+export EDITOR='nvim'
 
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
@@ -129,6 +131,7 @@ add-compile-commands() {
 alias add_ros_compile_commands="add-compile-commands"
 
 alias cd=z
+alias cat=bat
 alias home=cd $home
 
 
