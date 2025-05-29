@@ -1,11 +1,11 @@
-@import url("./colors.css");
+@import url("./dracula.css");
 
 * {
   padding: 0;
   border-radius: 0;
   min-height: 0;
   margin: 0;
-  color: #8da9d1;
+  color: @purple;
   border: none;
   text-shadow: none;
   transition: none;
@@ -14,7 +14,7 @@
 
 window#waybar {
   background: transparent;
-  color: #8da9d1;
+  color: @purple;
   padding: 0px 0px;
   margin: 0;
   border-radius: 15px;
@@ -33,28 +33,6 @@ window#waybar {
   padding-top:5px;
 }
 
-#custom-wofi,
-#workspaces button,
-#workspaces button:hover,
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover,
-#workspaces button.urgent,
-#window,
-#pulseaudio,
-#pulseaudio.muted,
-#clock {
-  font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 14px;
-  font-weight: 400;
-  color: #202020;
-  background: #243b4d;
-  border-radius: 2px;
-}
-
-#window,
-#pulseaudio,
 #pulseaudio.muted,
 #clock {
   padding-right: 4px;
@@ -71,12 +49,11 @@ window#waybar {
 
 #workspaces {
   margin: 0px;
-
 }
 
 #workspaces button {
-  color: #8da9d1;
-  background: #243b4d;
+  color: @purple;
+  background: @background;
   border: none;
   min-width: 30px;
   padding: 0 4px;
@@ -85,7 +62,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: #243b4d;
+  color: @purple;
+  background: @selection;
   min-width: 45px;
   border-radius: 50px;
 }
@@ -93,38 +71,36 @@ window#waybar {
 #workspaces button.visible {
   border: none;
   border-radius: 50px;
-  background: #243b4d;
+  color: @purple;
+  background: @background;
 }
 
 #workspaces button.visible:hover {
   border: none;
   border-radius: 50px;
-  background: #243b4d;
+  color: @purple;
+  background: @pink;
 }
 
 #workspaces button.active {
   border: none;
   border-radius: 50px;
   min-width: 40px;
-  background: #243b4d;
-}
-
-#workspaces button.active:hover {
-  border: none;
-  border-radius: 50px;
-  background: #243b4d;
+  color: @purple;
+  background: @comment;
 }
 
 #workspaces button.urgent {
   border: none;
   border-radius: 12px;
-  background: #ea6962;
+  color: @purple;
+  background: @selection;
 }
 
 
 #window {
-  color: #8da9d1;
-  background: #243b4d;
+  color: @purple;
+  background: @background;
   border-radius:50px;
   padding: 5px 20px 6px;
   margin: 5px 0px;
@@ -132,16 +108,16 @@ window#waybar {
 
 
 #pulseaudio {
-  color: #8da9d1;
-  background: #243b4d;
+  color: @purple;
+  background: @background;
   border-radius:50px;
   padding: 5px 20px 6px;
   margin: 5px 0px;
 }
 
 #pulseaudio.muted {
-  color: #ea6962;
-  background: #243b4d;
+  color: @red;
+  background: @background;
   border-radius:50px;
   padding: 5px 20px 6px;
   margin: 5px 0px;
@@ -149,30 +125,25 @@ window#waybar {
 
 
 #clock.time {
-  color: #8da9d1;
-  background: #243b4d;
+  color: @purple;
+  background: @background;
   padding: 5px 20px 6px;
   border-radius:50px;
   margin: 5px 0px;
 }
 
 #mpris {
-  color: #282828;
+  color: @purple;
   border: 2px solid #242b33;
-  background: #8da9d1;
+  background: @background;
   padding: 5px 20px 6px;
   border-radius:50px;
   margin: 5px 0px;
 }
 
-#custom-notification {
-  color: #8da9d1;
-  font-size: 14px;
-  background: #242b33;
-  padding: 2px 2px;
-}
-#bluetooth,#custom-wifi {
-  background:#243b4d;
+#bluetooth {
+  color: @purple;
+  background:@background;
   border-radius:50px;
   padding: 5px 15px 8px;
   margin: 5px 0px;

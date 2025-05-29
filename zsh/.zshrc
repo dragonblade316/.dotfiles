@@ -41,7 +41,7 @@ ZSH_THEME="fishy"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -86,11 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -108,13 +108,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-export EDITOR='nvim'
-
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 
-export CC=clang
-export CXX=clang++
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+export CC=gcc
+export CXX=g++
 export CLANG_BASE="--build-base build_clang --install-base install_clang"
 
 export OLD_BUILD_ARGS="--symlink-install ${CLANG_BASE} --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
@@ -130,10 +138,13 @@ add-compile-commands() {
 }
 alias add_ros_compile_commands="add-compile-commands"
 
+if [[ -n $CONTAINER_ID ]]; then
+else
 alias cd=z
 alias cat=bat
+alias ls=lsd
 alias home=cd $home
-
+fi
 
 eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
@@ -141,3 +152,6 @@ eval "$(zoxide init zsh)"
 
 # Created by `pipx` on 2024-12-21 04:58:42
 export PATH="$PATH:/home/dragonblade316/.local/bin"
+
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"

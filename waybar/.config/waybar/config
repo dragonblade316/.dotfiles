@@ -30,13 +30,13 @@
     "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      "1": "<span color='#8da9d1' >1</span>",
-      "2": "<span color='#8da9d1' >2</span>",
-      "3": "<span color='#8da9d1' >3</span>",
-      "4": "<span color='#8da9d1' >4</span>",
-      "5": "<span color='#8da9d1' >5</span>",
-      "6": "<span color='#8da9d1' >6</span>",
-      "7": "<span color='#8da9d1' >7</span>",
+      "1": "<span color='#bd93f9' >1</span>",
+      "2": "<span color='#bd93f9' >2</span>",
+      "3": "<span color='#bd93f9' >3</span>",
+      "4": "<span color='#bd93f9' >4</span>",
+      "5": "<span color='#bd93f9' >5</span>",
+      "6": "<span color='#bd93f9' >6</span>",
+      "7": "<span color='#bd93f9' >7</span>",
       "default": "<span color='#8da9d1'>+1</span>",
     },
     "persistent-workspaces": {
@@ -51,7 +51,8 @@
       "": "<span foreground= '#458588'></span> hyprland",
       "~": " terminal",
       "com.mitchellh.ghostty": ">> ghostty",
-      "zen-beta": ">> zen"
+      "zen-beta": ">> zen",
+      "zen-alpha": ">> zen"
     }
   },
 
@@ -82,10 +83,10 @@
 
 
   "bluetooth": {
-    "format": "<span color='#8da9d1'>devices</span>",
-    "format-disabled": "<span color='#8da9d1'>devices</span>",
-    "format-connected": "<span color='#8da9d1'>connected</span>",
-    "format-connected-battery": "<span color='#458588'>connected</span>",
+    "format": "<span color='#bd93f9'>devices</span>",
+    "format-disabled": "<span color='#bd93f9'>devices</span>",
+    "format-connected": "<span color='#bd93f9'>connected</span>",
+    "format-connected-battery": "<span color='#ff5555'>connected</span>",
 
     "tooltip-format": 
       "{num_connections} connected",
