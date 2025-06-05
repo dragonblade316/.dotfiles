@@ -1,20 +1,21 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -90,11 +91,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
   programs.zsh = {
     enable = true;
     syntaxHighlighting = {
-        enable = true;
+      enable = true;
     };
   };
 
@@ -102,10 +102,10 @@
   users.users.dragonblade316 = {
     isNormalUser = true;
     description = "Teddy";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.zsh;
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -142,18 +142,24 @@
     zoxide
     lsd
     zsh-syntax-highlighting
-    
+
     nwg-look
     rose-pine-hyprcursor
 
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     docker-compose # start group of containers for dev
+
+    streamdeck-ui
+
+    alejandra
   ];
 
-  fonts.packages = with pkgs; [ nerd-fonts.arimo ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.arimo
+    nerd-fonts.atkynson-mono
+  ];
   fonts.fontDir.enable = true;
-
 
   programs.nh = {
     enable = true;
@@ -161,7 +167,6 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/dragonblade316/nixos";
   };
-
 
   virtualisation.containers.enable = true;
   virtualisation = {
@@ -173,6 +178,30 @@
 
       # Required for containers under podman-compose to be able to talk to each other.
       defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
+  services = {
+    syncthing = {
+      enable = true;
+      # group = "mygroupname";
+      user = "dragonblade316";
+      dataDir = "/home/dragonblade316/Documents/"; # Default folder for new synced folders
+      # configDir = "/home/myusername/Documents/.config/syncthing";   # Folder for Syncthing's settings and keys
+      settings = {
+        devices = {
+          # "laptop" = { id = "" };
+          "phone" = {id = "CGQHMOW-D57FW6E-J7OBE2U-ATYXMZP-ITTIBDF-MVUXTLD-NXBIWM4-KTUVCAA";};
+          "tablet" = {id = "CY77CWR-7R26MUA-R6ISYHT-H4NZYZF-JN3DRIS-WXDIFBM-KZJ2FVS-EIU7LQF";};
+        };
+
+        folders = {
+          "notes" = {
+            path = "/home/dragonblade316/Documents/notes/";
+            devices = ["phone" "tablet"];
+          };
+        };
+      };
     };
   };
 
@@ -192,6 +221,11 @@
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
+
+  #for syncthing
+  networking.firewall.allowedTCPPorts = [8384 22000];
+  networking.firewall.allowedUDPPorts = [22000 21027];
+
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
@@ -202,5 +236,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
