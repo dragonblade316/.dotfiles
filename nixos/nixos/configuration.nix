@@ -132,6 +132,7 @@
     rofi
     yazi
     lazygit
+    localsend
 
     obsidian
 
