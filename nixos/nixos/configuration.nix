@@ -131,6 +131,7 @@
     swww
     rofi
     yazi
+    lazygit
 
     obsidian
 
