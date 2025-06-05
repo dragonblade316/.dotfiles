@@ -133,6 +133,7 @@
     yazi
     lazygit
     localsend
+    orca-slicer
 
     obsidian
 
