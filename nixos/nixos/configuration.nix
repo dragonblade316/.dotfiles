@@ -153,10 +153,13 @@
     podman-tui # status of containers in the terminal
     docker-compose # start group of containers for dev
 
-    streamdeck-ui
-
     alejandra
   ];
+
+  programs.streamdeck-ui = {
+    enable = true;
+    autoStart = true;
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.arimo
