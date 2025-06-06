@@ -162,7 +162,6 @@
     nerd-fonts.arimo
     nerd-fonts.atkynson-mono
   ];
-  fonts.fontDir.enable = true;
 
   programs.nh = {
     enable = true;
@@ -206,6 +205,17 @@
         };
       };
     };
+  };
+
+  system.autoUpgrade = {
+    enable = true;
+    dates = "04:00";
+    flake = "${config.users.users.dragonblade316.home}/nixpkgs";
+    flags = [
+      "--update-input"
+      "nixpkgs"
+    ];
+    allowReboot = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
