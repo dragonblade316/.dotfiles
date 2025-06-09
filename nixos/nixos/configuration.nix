@@ -134,6 +134,7 @@
     lazygit
     localsend
     orca-slicer
+    prismlauncher
 
     obsidian
 
