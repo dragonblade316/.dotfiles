@@ -155,7 +155,7 @@
     docker-compose # start group of containers for dev
 
     alejandra
-    blender
+    blender-hip
   ];
 
   programs.streamdeck-ui = {
