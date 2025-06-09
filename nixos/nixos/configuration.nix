@@ -163,6 +163,10 @@
     autoStart = true;
   };
 
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+
   fonts.packages = with pkgs; [
     nerd-fonts.arimo
     nerd-fonts.atkynson-mono
