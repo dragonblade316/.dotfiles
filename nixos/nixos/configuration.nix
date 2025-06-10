@@ -145,6 +145,7 @@
     starship
     zoxide
     lsd
+    bat
     zsh-syntax-highlighting
 
     nwg-look
