@@ -205,12 +205,17 @@
           # "laptop" = { id = "" };
           "phone" = {id = "CGQHMOW-D57FW6E-J7OBE2U-ATYXMZP-ITTIBDF-MVUXTLD-NXBIWM4-KTUVCAA";};
           "tablet" = {id = "CY77CWR-7R26MUA-R6ISYHT-H4NZYZF-JN3DRIS-WXDIFBM-KZJ2FVS-EIU7LQF";};
+          "laptop" = {id = "LSIB4GZ-XSX4CQF-IZB2PEE-7TXW74C-YXBBZ4Z-J2EXGZ3-FXPJVOV-2IYXYAP";};
         };
 
         folders = {
           "notes" = {
             path = "/home/dragonblade316/Documents/notes/";
-            devices = ["phone" "tablet"];
+            devices = ["phone" "tablet" "laptop"];
+          };
+          "Programming" = {
+            path = "/home/dragonblade316/Programming/";
+            devices = ["laptop"];
           };
         };
       };
