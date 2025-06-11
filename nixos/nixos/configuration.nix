@@ -132,7 +132,6 @@
     rofi
     yazi
     lazygit
-    localsend
     orca-slicer
     prismlauncher
 
@@ -164,6 +163,11 @@
   programs.streamdeck-ui = {
     enable = true;
     autoStart = true;
+  };
+
+  programs.localsend = {
+    enable = true;
+    openFirewall = true;
   };
 
   systemd.tmpfiles.rules = [
