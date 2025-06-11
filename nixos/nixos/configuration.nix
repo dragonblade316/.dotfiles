@@ -134,6 +134,7 @@
     lazygit
     orca-slicer
     prismlauncher
+    hyprshot
 
     obsidian
 
