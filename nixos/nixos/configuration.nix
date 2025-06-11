@@ -157,6 +157,8 @@
 
     alejandra
     blender-hip
+
+    hypridle
   ];
 
   programs.streamdeck-ui = {
