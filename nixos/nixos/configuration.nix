@@ -175,6 +175,8 @@
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
 
+  services.flatpak.enable = true;
+
   fonts.packages = with pkgs; [
     nerd-fonts.arimo
     nerd-fonts.atkynson-mono
