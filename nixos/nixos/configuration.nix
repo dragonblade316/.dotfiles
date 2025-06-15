@@ -118,7 +118,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
     stow
     vesktop
     steam
@@ -160,6 +159,13 @@
 
     hypridle
   ];
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    withPython3 = true;
+    withNodeJs = true;
+  };
 
   programs.streamdeck-ui = {
     enable = true;
