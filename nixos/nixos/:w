@@ -207,12 +207,13 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
-
+  
   #setting up i2c dev for ddcutil
   boot.kernelModules = ["i2c-dev"];
   services.udev.extraRules = ''
-    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
+
 
   services = {
     syncthing = {
@@ -286,8 +287,8 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  #udev rules for oakd. Figure this out later
-  # services.udev.extraRules = ''SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"'';
+  #udev rules for oakd
+  services.udev.extraRules = ''SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"'';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
