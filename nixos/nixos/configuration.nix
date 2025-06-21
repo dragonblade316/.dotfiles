@@ -137,7 +137,7 @@
     distrobox
     waybar
     swww
-    rofi
+    rofi-wayland
     yazi
     lazygit
     orca-slicer
