@@ -169,6 +169,7 @@
     hypridle
 
     ddcutil
+    pulseaudio
   ];
 
   programs.neovim = {
