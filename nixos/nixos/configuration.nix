@@ -167,6 +167,8 @@
     blender-hip
 
     hypridle
+
+    ddcutil
   ];
 
   programs.neovim = {
