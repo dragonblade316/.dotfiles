@@ -182,7 +182,7 @@
 
   programs.streamdeck-ui = {
     enable = true;
-    autoStart = false;
+    autoStart = true;
   };
 
   programs.localsend = {
