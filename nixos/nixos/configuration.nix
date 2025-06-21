@@ -170,6 +170,7 @@
 
     ddcutil
     pulseaudio
+    playerctl
   ];
 
   programs.neovim = {
