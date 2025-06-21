@@ -88,6 +88,15 @@
     #media-session.enable = true;
   };
 
+  hardware.i2c.enable = true;
+
+  #setting up i2c dev for ddcutil
+  # boot.kernelModules = ["i2c-dev"];
+  # services.udev.extraRules = ''
+  #   KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  # '';
+  #
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -207,12 +216,6 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
-
-  #setting up i2c dev for ddcutil
-  boot.kernelModules = ["i2c-dev"];
-  services.udev.extraRules = ''
-    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
-  '';
 
   services = {
     syncthing = {
