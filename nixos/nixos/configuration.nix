@@ -168,6 +168,7 @@
 
     hypridle
 
+    streamcontroller
     ddcutil
     pulseaudio
     playerctl
@@ -180,9 +181,10 @@
     withNodeJs = true;
   };
 
+  #keeping this around so the udev rules are set. sdeck-ui is not currently used
   programs.streamdeck-ui = {
     enable = true;
-    autoStart = true;
+    autoStart = false;
   };
 
   programs.localsend = {
