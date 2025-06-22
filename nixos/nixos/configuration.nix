@@ -173,7 +173,7 @@
     pulseaudio
     playerctl
 
-    moonlight
+    moonlight-qt
   ];
 
   programs.neovim = {
