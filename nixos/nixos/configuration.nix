@@ -172,6 +172,8 @@
     ddcutil
     pulseaudio
     playerctl
+
+    moonlight
   ];
 
   programs.neovim = {
