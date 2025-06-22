@@ -174,6 +174,8 @@
     playerctl
 
     moonlight-qt
+
+    tor
   ];
 
   programs.neovim = {
