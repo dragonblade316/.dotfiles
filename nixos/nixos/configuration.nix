@@ -175,7 +175,8 @@
 
     moonlight-qt
 
-    tor
+    #need to run a reley at some point
+    tor-browser
   ];
 
   programs.neovim = {
