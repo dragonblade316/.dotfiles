@@ -177,6 +177,8 @@
 
     #need to run a reley at some point
     tor-browser
+
+    hyprpolkitagent
   ];
 
   programs.neovim = {
