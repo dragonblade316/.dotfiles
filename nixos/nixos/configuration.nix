@@ -183,6 +183,8 @@
 
     easyeffects
     obs-studio
+
+    audacity
   ];
 
   programs.neovim = {
