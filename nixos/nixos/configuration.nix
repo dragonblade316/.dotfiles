@@ -182,6 +182,7 @@
     hyprpolkitagent
 
     easyeffects
+    obs-studio
   ];
 
   programs.neovim = {
