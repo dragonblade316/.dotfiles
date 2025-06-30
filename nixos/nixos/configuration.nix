@@ -207,6 +207,10 @@
     withNodeJs = true;
   };
 
+  environment.variables = {
+    RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+  };
+
   #keeping this around so the udev rules are set. sdeck-ui is not currently used
   programs.streamdeck-ui = {
     enable = true;
