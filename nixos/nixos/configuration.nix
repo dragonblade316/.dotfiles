@@ -195,6 +195,9 @@
     # stylua
 
     busybox
+
+    rustc
+    cargo
   ];
 
   programs.neovim = {
