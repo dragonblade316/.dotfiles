@@ -189,10 +189,10 @@
     audacity
     ripgrep
 
-    pyright
-    rust-analyzer
-    lua-language-server
-    stylua
+    # pyright
+    # rust-analyzer
+    # lua-language-server
+    # stylua
   ];
 
   programs.neovim = {
@@ -318,6 +318,11 @@
 
   #udev rules for oakd. Figure this out later
   # services.udev.extraRules = ''SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"'';
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [
+    pkgs.stdenv.cc.cc
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
