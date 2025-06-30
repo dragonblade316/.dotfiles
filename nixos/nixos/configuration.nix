@@ -193,6 +193,8 @@
     # rust-analyzer
     # lua-language-server
     # stylua
+
+    busybox
   ];
 
   programs.neovim = {
