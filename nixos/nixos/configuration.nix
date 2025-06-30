@@ -198,6 +198,8 @@
 
     rustc
     cargo
+
+    heroic
   ];
 
   programs.neovim = {
