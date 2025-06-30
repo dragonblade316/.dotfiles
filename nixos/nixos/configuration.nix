@@ -187,6 +187,9 @@
     obs-studio
 
     audacity
+
+    pyright
+    rust-analyzer
   ];
 
   programs.neovim = {
