@@ -187,6 +187,7 @@
     obs-studio
 
     audacity
+    ripgrep
 
     pyright
     rust-analyzer
