@@ -191,6 +191,8 @@
 
     pyright
     rust-analyzer
+    lua-language-server
+    stylua
   ];
 
   programs.neovim = {
