@@ -200,6 +200,7 @@
     cargo
 
     heroic
+    gamescope
   ];
 
   programs.neovim = {
