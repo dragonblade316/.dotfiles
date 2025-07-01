@@ -231,6 +231,8 @@
 
   services.flatpak.enable = true;
 
+  programs.gamemode.enable = true;
+
   fonts.packages = with pkgs; [
     nerd-fonts.arimo
     nerd-fonts.atkynson-mono
