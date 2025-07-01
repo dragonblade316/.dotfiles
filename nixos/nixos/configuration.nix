@@ -199,6 +199,7 @@
     rustc
     cargo
 
+    heroic
     gamescope
   ];
 
