@@ -72,7 +72,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git 
-    zsh-syntax-highlighting 
+    # zsh-syntax-highlighting 
     zsh-autosuggestions
 )
 
@@ -143,6 +143,11 @@ else
 alias cd=z
 alias cat=bat
 alias ls=lsd
+
+#nix spesific
+alias c=~/scripts/rebuild.sh
+alias ns="nix-shell --run zsh"
+
 alias home=cd $home
 fi
 
