@@ -201,6 +201,8 @@
 
     heroic
     gamescope
+
+    ytmdesktop
   ];
 
   programs.neovim = {
