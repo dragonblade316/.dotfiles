@@ -203,6 +203,8 @@
     gamescope
 
     ytmdesktop
+
+    wl-clipboard
   ];
 
   programs.neovim = {
