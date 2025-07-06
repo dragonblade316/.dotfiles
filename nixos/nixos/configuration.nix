@@ -132,7 +132,6 @@
   environment.systemPackages = with pkgs; [
     stow
     vesktop
-    steam
     gh
     git
     gcc
@@ -212,6 +211,12 @@
     defaultEditor = true;
     withPython3 = true;
     withNodeJs = true;
+  };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
   };
 
   environment.variables = {
