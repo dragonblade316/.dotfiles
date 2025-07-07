@@ -199,7 +199,6 @@
     cargo
 
     heroic
-    gamescope
 
     ytmdesktop
 
@@ -217,6 +216,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
+    gamescopeSession.enable = true;
   };
 
   environment.variables = {
@@ -246,6 +246,7 @@
   services.flatpak.enable = true;
 
   programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.arimo
