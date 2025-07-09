@@ -203,6 +203,9 @@
     ytmdesktop
 
     wl-clipboard
+
+    makemkv
+    upscayl
   ];
 
   programs.neovim = {
