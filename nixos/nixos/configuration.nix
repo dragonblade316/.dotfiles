@@ -344,11 +344,12 @@
   networking.firewall.allowedTCPPorts = [8384 22000];
   networking.firewall.allowedUDPPorts = [22000 21027];
 
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  #udev rules for oakd. Figure this out later
-  # services.udev.extraRules = ''SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"'';
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [
