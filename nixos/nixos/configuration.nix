@@ -202,6 +202,8 @@
 
     makemkv
     upscayl
+
+    btop
   ];
 
   programs.neovim = {
