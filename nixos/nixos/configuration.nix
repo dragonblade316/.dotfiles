@@ -204,6 +204,7 @@
     upscayl
 
     btop
+    onlyoffice-desktopeditors
   ];
 
   programs.neovim = {
