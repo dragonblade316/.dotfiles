@@ -205,6 +205,8 @@
 
     btop
     onlyoffice-desktopeditors
+
+    gparted
   ];
 
   programs.neovim = {
