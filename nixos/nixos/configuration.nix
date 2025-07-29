@@ -310,6 +310,11 @@
     };
   };
 
+  services.netbird = {
+    enable = true;
+    ui.enable = true;
+  };
+
   xdg.mime.defaultApplications = {
     "text/html" = "";
     "x-scheme-handler/http" = "app.zen_browser.zen.desktop";
