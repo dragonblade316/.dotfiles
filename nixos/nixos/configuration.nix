@@ -267,6 +267,13 @@
     flake = "/home/dragonblade316/nixos";
   };
 
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+
   virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
