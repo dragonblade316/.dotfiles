@@ -241,6 +241,19 @@
     openFirewall = true;
   };
 
+  services.sunshine = {
+    enable = true;
+    autoStart = false;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+
+  programs.weylus = {
+    enable = true;
+    users = ["dragonblade316"];
+    openFirewall = true;
+  };
+
   programs.alvr = {
     enable = true;
     openFirewall = true;
@@ -265,13 +278,6 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/dragonblade316/nixos";
-  };
-
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true;
-    openFirewall = true;
   };
 
   virtualisation.containers.enable = true;
