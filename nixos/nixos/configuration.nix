@@ -208,6 +208,7 @@
 
     btop
     onlyoffice-desktopeditors
+    nextcloud-client
 
     gparted
   ];
