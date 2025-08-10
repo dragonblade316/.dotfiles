@@ -308,12 +308,13 @@
           "tablet" = {id = "CY77CWR-7R26MUA-R6ISYHT-H4NZYZF-JN3DRIS-WXDIFBM-KZJ2FVS-EIU7LQF";};
           "laptop" = {id = "LSIB4GZ-XSX4CQF-IZB2PEE-7TXW74C-YXBBZ4Z-J2EXGZ3-FXPJVOV-2IYXYAP";};
           "services" = {id = "TLPNBI2-XL6BVKW-HD7NZZY-SP6OOVG-YER5USF-LSDBKSB-YSJQO7F-G2HIKQH";};
+          "docker-services" = {id = "IAYTK6X-AUL6FYR-PMBIA5M-MS7U5UV-BSZPDK2-HE4M7OO-52RY33L-NPYBUQ3";};
         };
 
         folders = {
           "notes" = {
             path = "/home/dragonblade316/Documents/notes/";
-            devices = ["phone" "tablet" "laptop" "services"];
+            devices = ["phone" "tablet" "laptop" "services" "docker-services"];
           };
           "Programming" = {
             path = "/home/dragonblade316/Programming/";
