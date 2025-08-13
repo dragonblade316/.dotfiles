@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "toothless"; # Define your hostname.
 
   programs.hyprland = {
     enable = true;

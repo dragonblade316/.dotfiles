@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "dragonblade316"; # Define your hostname.
+  networking.hostName = "cloudjumper"; # Define your hostname.
 
 
   # environment.systemPackages = with pkgs; [

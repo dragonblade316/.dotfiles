@@ -9,13 +9,22 @@
     self,
     nixpkgs,
   }: {
-    nixosConfigurations.dragonblade316 = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.toothless = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./common.nix
-        ./hosts/main.nix
+        ./hosts/main
+      ];
+    };
+    nixosConfigurations.cloudjumper = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+        ./common
+        ./hosts/laptop
       ];
     };
   };
