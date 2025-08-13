@@ -23,7 +23,7 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        ./common
+        ./common.nix
         ./hosts/laptop
       ];
     };
