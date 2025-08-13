@@ -1,0 +1,59 @@
+{
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+
+  networking.hostName = "nixos"; # Define your hostname.
+
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true; # recommended for most users
+    xwayland.enable = true; # Xwayland can be disabled.
+  };
+
+
+  environment.systemPackages = with pkgs; [
+    swaynotificationcenter
+
+    streamcontroller
+    ddcutil
+
+    hypridle
+    waybar
+    swww
+    rofi-wayland
+
+    nwg-look
+    rose-pine-hyprcursor
+    hyprpolkitagent
+  ];
+
+  services.syncthing.settings.folders = {
+    "notes" = {
+      path = "/home/dragonblade316/Documents/notes/";
+      devices = ["phone" "tablet" "laptop" "services" "docker-services"];
+    };
+    "Programming" = {
+      path = "/home/dragonblade316/Programming/";
+      devices = ["laptop"];
+    };
+  };
+
+  #keeping this around so the udev rules are set. sdeck-ui is not currently used
+  programs.streamdeck-ui = {
+    enable = true;
+    autoStart = false;
+  };
+
+  services.sunshine = {
+    enable = true;
+    autoStart = false;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+}
