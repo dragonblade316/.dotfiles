@@ -10,12 +10,16 @@
 
   networking.hostName = "toothless"; # Define your hostname.
 
+  programs.adb.enable = true;
+  users.users.dragonblade316 = {
+    extraGroups = ["adbusers"];
+  };
+
   programs.hyprland = {
     enable = true;
     withUWSM = true; # recommended for most users
     xwayland.enable = true; # Xwayland can be disabled.
   };
-
 
   environment.systemPackages = with pkgs; [
     swaynotificationcenter
@@ -31,6 +35,9 @@
     nwg-look
     rose-pine-hyprcursor
     hyprpolkitagent
+
+    sidequest
+    vivaldi
   ];
 
   services.syncthing.settings.folders = {

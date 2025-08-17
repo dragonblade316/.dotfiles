@@ -10,8 +10,9 @@
 
   networking.hostName = "cloudjumper"; # Define your hostname.
 
+  environment.systemPackages = with pkgs; [
+      rose-pine-cursor
 
-  # environment.systemPackages = with pkgs; [
   #   swaynotificationcenter
   #
   #   streamcontroller
@@ -25,7 +26,7 @@
   #   nwg-look
   #   rose-pine-hyprcursor
   #   hyprpolkitagent
-  # ];
+  ];
   #
   services.syncthing.settings.folders = {
     "notes" = {
