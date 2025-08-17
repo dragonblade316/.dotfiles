@@ -11,27 +11,14 @@
   networking.hostName = "cloudjumper"; # Define your hostname.
 
   environment.systemPackages = with pkgs; [
-      rose-pine-cursor
-
-  #   swaynotificationcenter
-  #
-  #   streamcontroller
-  #   ddcutil
-  #
-  #   hypridle
-  #   waybar
-  #   swww
-  #   rofi-wayland
-  #
-  #   nwg-look
-  #   rose-pine-hyprcursor
-  #   hyprpolkitagent
+    rose-pine-cursor
+    gnome-tweaks
   ];
   #
   services.syncthing.settings.folders = {
     "notes" = {
       path = "/home/dragonblade316/Documents/notes/";
-      devices = ["phone" "tablet" "desktop" "services" "docker-services"];
+      devices = ["phone" "tablet" "desktop"];
     };
     "Programming" = {
       path = "/home/dragonblade316/Programming/";
