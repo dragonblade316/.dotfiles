@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     rose-pine-cursor
     gnome-tweaks
+    zoom-us
   ];
   #
   services.syncthing.settings.folders = {
