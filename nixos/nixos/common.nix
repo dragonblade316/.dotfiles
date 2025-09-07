@@ -180,6 +180,8 @@
     nextcloud-client
 
     gparted
+
+    pavucontrol
   ];
 
   programs.neovim = {
