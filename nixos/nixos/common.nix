@@ -182,6 +182,8 @@
     gparted
 
     pavucontrol
+
+    google-chrome
   ];
 
   programs.neovim = {
