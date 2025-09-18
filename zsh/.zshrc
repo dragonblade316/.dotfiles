@@ -146,7 +146,7 @@ alias ls=lsd
 
 #nix spesific
 alias c=~/scripts/rebuild.sh
-alias ns="nix-shell --run zsh"
+alias ns="NIXPKGS_ALLOW_UNFREE=1 nix-shell --impure --run zsh"
 
 alias home=cd $home
 fi
