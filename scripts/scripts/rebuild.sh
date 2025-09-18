@@ -4,7 +4,7 @@ nvim .
 alejandra . &>/dev/null
 git diff -U0 *.nix
 echo "NixOS rebuilding"
-nh os switch -H dragonblade316
+nh os switch 
 #need to add logging and better errors
 
 gen=$(nh os info | grep "current")

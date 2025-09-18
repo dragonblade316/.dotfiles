@@ -17,7 +17,7 @@
    ],
 
   "modules-right": [
-    "bluetooth",
+    "tray",
     "pulseaudio",
     "mpris",
   ],
@@ -81,6 +81,14 @@
     "max-length": 40,
   },
 
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+        "blueman": "bluetooth",
+        "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    }
+  },
 
   "bluetooth": {
     "format": "<span color='#bd93f9'>devices</span>",

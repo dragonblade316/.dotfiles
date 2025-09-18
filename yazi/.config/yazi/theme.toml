@@ -27,7 +27,7 @@ duration = 0.2
 easing = "easeInOutCubic"
 
 # Manager
-[manager]
+[mgr]
 # Enhanced preview options
 preview = { tab_size = 2, max_width = 100, max_height = 50, cache_size = 50, scroll_offset = 5 }
 preview_ratios = [1, 4, 4]
