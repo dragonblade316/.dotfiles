@@ -19,11 +19,11 @@
   services.syncthing.settings.folders = {
     "notes" = {
       path = "/home/dragonblade316/Documents/notes/";
-      devices = ["phone" "tablet" "desktop"];
+      devices = ["phone" "tablet" "toothless"];
     };
     "Programming" = {
       path = "/home/dragonblade316/Programming/";
-      devices = ["desktop"];
+      devices = ["toothless"];
     };
   };
 
