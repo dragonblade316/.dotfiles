@@ -163,6 +163,7 @@
 
     audacity
     ripgrep
+    fzf
 
     # pyright
     # rust-analyzer
