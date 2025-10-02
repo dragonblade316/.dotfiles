@@ -175,6 +175,8 @@
     rustc
     cargo
     jetbrains.idea-community-bin
+    python313
+    go
 
     heroic
 
