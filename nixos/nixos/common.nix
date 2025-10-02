@@ -173,6 +173,8 @@
 
     wl-clipboard
 
+    kickstart
+
     makemkv
 
     btop
