@@ -67,4 +67,7 @@
     capSysAdmin = true;
     openFirewall = true;
   };
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 }
