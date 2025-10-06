@@ -38,6 +38,8 @@
 
     sidequest
     vivaldi
+
+    godot
   ];
 
   services.syncthing.settings.folders = {
