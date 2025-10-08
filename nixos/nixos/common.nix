@@ -133,6 +133,7 @@
     hyprshot
 
     obsidian
+    zoom-us
 
     zsh
     zellij
