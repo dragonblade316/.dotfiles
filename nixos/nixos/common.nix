@@ -8,6 +8,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.trusted-users = ["root" "dragonblade316"];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
