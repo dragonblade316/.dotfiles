@@ -40,6 +40,7 @@
     vivaldi
 
     godot
+    arduino-ide
   ];
 
   services.syncthing.settings.folders = {
