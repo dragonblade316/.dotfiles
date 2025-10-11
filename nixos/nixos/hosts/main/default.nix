@@ -12,7 +12,7 @@
 
   programs.adb.enable = true;
   users.users.dragonblade316 = {
-    extraGroups = ["adbusers"];
+    extraGroups = ["adbusers" "dialout"];
   };
 
   programs.hyprland = {
