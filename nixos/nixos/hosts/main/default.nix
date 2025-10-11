@@ -41,6 +41,7 @@
 
     godot
     arduino-ide
+    scrcpy
   ];
 
   services.syncthing.settings.folders = {
