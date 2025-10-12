@@ -197,6 +197,7 @@
     pavucontrol
 
     google-chrome
+    imagemagick
   ];
 
   programs.neovim = {
