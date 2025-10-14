@@ -18,6 +18,12 @@
     gnome-tweaks
     zoom-us
   ];
+
+  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+    [org.gnome.mutter]
+    experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
+  '';
+
   #
   services.syncthing.settings.folders = {
     "notes" = {
