@@ -178,6 +178,7 @@
     cargo
     jetbrains.idea-community-bin
     python313
+    pipx
     go
 
     heroic
