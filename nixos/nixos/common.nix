@@ -229,6 +229,18 @@
     openFirewall = true;
   };
 
+  services.keyd.enable = true;
+  services.keyd.keyboards = {
+    default = {
+      ids = ["*"];
+      settings = {
+        main = {
+          capslock = "backspace";
+        };
+      };
+    };
+  };
+
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
