@@ -199,6 +199,7 @@
 
     google-chrome
     imagemagick
+    hyprpanel
   ];
 
   programs.neovim = {
