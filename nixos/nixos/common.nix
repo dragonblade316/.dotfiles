@@ -174,6 +174,7 @@
 
     rustc
     cargo
+    jetbrains.idea-community-bin
 
     heroic
 
