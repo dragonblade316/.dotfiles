@@ -35,6 +35,7 @@
     nwg-look
     rose-pine-hyprcursor
     hyprpolkitagent
+    hyprpanel
 
     sidequest
     vivaldi
