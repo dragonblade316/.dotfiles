@@ -302,6 +302,7 @@
     ui.enable = true;
   };
 
+  xdg.mime.enable = true;
   xdg.mime.defaultApplications = {
     "text/html" = "app.zen_browser.zen.desktop";
     "x-scheme-handler/http" = "app.zen_browser.zen.desktop";
