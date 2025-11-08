@@ -61,6 +61,7 @@
   networking.firewall.allowedUDPPorts = [9000];
 
   networking.firewall.extraCommands = ''
+    iptables -s 224.0.0.0/24 -j nixos-fw
     iptables -s 224.0.0.0/24 -j nixos-fw-accept
   '';
 
