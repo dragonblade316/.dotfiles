@@ -61,8 +61,8 @@
   networking.firewall.allowedUDPPorts = [9000];
 
   networking.firewall.extraCommands = ''
-    iptables -s 224.0.0.0/24 -j nixos-fw
-    iptables -s 224.0.0.0/24 -j nixos-fw-accept
+    iptables -A INPUT -p udp -d 224.0.0.0/4 -j ACCEPT
+    iptables -A INPUT -p udp -s 224.0.0.0/4 -j ACCEPT
   '';
 
   #keeping this around so the udev rules are set. sdeck-ui is not currently used
