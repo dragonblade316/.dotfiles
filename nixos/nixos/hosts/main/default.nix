@@ -60,6 +60,10 @@
   networking.firewall.allowedTCPPorts = [9000];
   networking.firewall.allowedUDPPorts = [9000];
 
+  networking.firewall.extraCommands = ''
+    iptables -s 224.0.0.0/24 -j nixos-fw-accept
+  '';
+
   #keeping this around so the udev rules are set. sdeck-ui is not currently used
   programs.streamdeck-ui = {
     enable = true;
