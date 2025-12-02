@@ -30,7 +30,7 @@
     hypridle
     waybar
     swww
-    rofi-wayland
+    rofi
 
     nwg-look
     rose-pine-hyprcursor
