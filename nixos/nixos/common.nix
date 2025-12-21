@@ -175,6 +175,7 @@
     busybox
 
     rustc
+    pixi
     cargo
     jetbrains.idea-community-bin
     python313
