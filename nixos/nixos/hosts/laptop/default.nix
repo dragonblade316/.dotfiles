@@ -11,7 +11,7 @@
   networking.hostName = "cloudjumper"; # Define your hostname.
 
   # waiting for cosmic beta to come to 25.05
-  # services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   environment.systemPackages = with pkgs; [
     rose-pine-cursor
