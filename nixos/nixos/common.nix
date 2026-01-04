@@ -132,6 +132,7 @@
     orca-slicer
     prismlauncher
     hyprshot
+    nuclear
 
     obsidian
     zoom-us
