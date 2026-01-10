@@ -1,5 +1,6 @@
 set -e
 pushd ~/.dotfiles/nixos/nixos/
+git pull
 nvim .
 alejandra . &>/dev/null
 git diff -U0 *.nix
@@ -10,4 +11,5 @@ nh os switch
 gen=$(nh os info | grep "current")
 git add .
 git commit -m "$gen"
+git push
 popd
