@@ -12,7 +12,7 @@
 
   programs.adb.enable = true;
   users.users.dragonblade316 = {
-    extraGroups = ["adbusers" "dialout"];
+    extraGroups = ["adbusers" "dialout" "vboxusers"];
   };
 
   programs.hyprland = {
@@ -79,4 +79,5 @@
   };
 
   virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.guest.enable = true;
 }
