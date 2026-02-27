@@ -150,7 +150,7 @@
     docker-compose # start group of containers for dev
 
     alejandra
-    blender-hip
+    # blender-hip
 
     pulseaudio
     playerctl
@@ -177,7 +177,7 @@
     rustc
     pixi
     cargo
-    jetbrains.idea-community-bin
+    jetbrains.idea-oss
     python313
     pipx
     go
@@ -188,7 +188,7 @@
 
     kickstart
 
-    makemkv
+    # makemkv
 
     btop
     onlyoffice-desktopeditors
