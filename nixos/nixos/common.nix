@@ -16,7 +16,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # networking.nameservers = ["192.168.12.12"];
+  networking.nameservers = ["1.1.1.1"];
   # networking.networkmanager.insertNameservers = ["192.168.12.12"];
   # networking.networkmanager.insertNameservers = ["1.1.1.1"];
 
