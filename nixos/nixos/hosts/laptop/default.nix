@@ -17,6 +17,7 @@
     rose-pine-cursor
     gnome-tweaks
     zoom-us
+    pangolin-cli
   ];
 
   programs.dconf.profiles.user.databases = [
