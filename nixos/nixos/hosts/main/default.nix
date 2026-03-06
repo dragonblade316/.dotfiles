@@ -10,7 +10,6 @@
 
   networking.hostName = "toothless"; # Define your hostname.
 
-  programs.adb.enable = true;
   users.users.dragonblade316 = {
     extraGroups = ["adbusers" "dialout" "vboxusers"];
   };
@@ -43,6 +42,12 @@
     godot
     arduino-ide
     scrcpy
+
+    pkgsRocm.blender
+
+    android-tools
+
+    gimp
   ];
 
   services.syncthing.settings.folders = {
@@ -72,7 +77,7 @@
   };
 
   services.sunshine = {
-    enable = true;
+    enable = false;
     autoStart = false;
     capSysAdmin = true;
     openFirewall = true;
