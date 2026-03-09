@@ -84,5 +84,5 @@
   };
 
   virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.vmware.host.enable = true;
 }
