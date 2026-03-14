@@ -201,6 +201,8 @@
     google-chrome
     imagemagick
     hyprpanel
+
+    pangolin-cli
   ];
 
   programs.neovim = {
