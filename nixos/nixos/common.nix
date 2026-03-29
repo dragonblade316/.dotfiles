@@ -181,6 +181,7 @@
     python313
     pipx
     go
+    devenv
 
     heroic
 
