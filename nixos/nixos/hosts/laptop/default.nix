@@ -19,6 +19,8 @@
     zoom-us
   ];
 
+  powerManagement.enable = true;
+
   programs.dconf.profiles.user.databases = [
     {
       settings = {
