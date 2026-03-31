@@ -204,6 +204,9 @@
     hyprpanel
 
     pangolin-cli
+
+    gst_all_1.gstreamer
+    ffmpeg
   ];
 
   programs.neovim = {
