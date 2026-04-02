@@ -85,4 +85,11 @@
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.vmware.host.enable = true;
+
+  services.ollama = {
+    enable = true;
+    # Optional: preload models, see https://ollama.com/library
+    loadModels = ["qwen2.5-coder:1.5b"];
+    package = pkgs.ollama-rocm;
+  };
 }

@@ -305,7 +305,7 @@
   };
 
   services.netbird = {
-    enable = true;
+    enable = false;
     ui.enable = true;
   };
 
