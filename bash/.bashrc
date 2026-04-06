@@ -25,3 +25,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#remove once done with assignment
+export PATH=${PATH}:.
+alias t='date +%r'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
