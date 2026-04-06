@@ -63,7 +63,6 @@
 
   services.restic.backups.toothless_backup.initialize = true;
   services.restic.backups.toothless_backup.user = "dragonblade316";
-  # services.restic.backups.toothless_backup.repository = "rest:http://192.168.12.185:30248/toothless_backup";
   services.restic.backups.toothless_backup.environmentFile = "/etc/nixos/restic-env";
   services.restic.backups.toothless_backup.paths = [
     "/home/dragonblade316/Documents"
@@ -79,6 +78,10 @@
     "/home/dragonblade316/Programming/**/target"
     "/home/dragonblade316/Programming/**/build"
   ];
+  services.restic.backups.toothless_backup.timerConfig = {
+    OnCalendar = "02:00";
+    Persistent = true;
+  };
 
   #just a generic port for various tasks
   networking.firewall.allowedTCPPorts = [9000];
