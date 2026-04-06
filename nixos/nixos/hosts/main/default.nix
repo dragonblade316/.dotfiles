@@ -61,6 +61,25 @@
     };
   };
 
+  services.restic.backups.toothless_backup.initialize = true;
+  services.restic.backups.toothless_backup.user = "dragonblade316";
+  # services.restic.backups.toothless_backup.repository = "rest:http://192.168.12.185:30248/toothless_backup";
+  services.restic.backups.toothless_backup.environmentFile = "/etc/nixos/restic-env";
+  services.restic.backups.toothless_backup.paths = [
+    "/home/dragonblade316/Documents"
+    "/home/dragonblade316/Pictures"
+    "/home/dragonblade316/Videos"
+    "/home/dragonblade316/.dotfiles"
+    "/home/dragonblade316/Music"
+    "/home/dragonblade316/Programming"
+    "/home/dragonblade316/Downloads"
+  ];
+  services.restic.backups.toothless_backup.exclude = [
+    #I really dont need backups of builds
+    "/home/dragonblade316/Programming/**/target"
+    "/home/dragonblade316/Programming/**/build"
+  ];
+
   #just a generic port for various tasks
   networking.firewall.allowedTCPPorts = [9000];
   networking.firewall.allowedUDPPorts = [9000];
