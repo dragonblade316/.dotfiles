@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -48,6 +49,8 @@
     android-tools
 
     gimp
+
+    inputs.affinity-nix.packages.x86_64-linux.v3
   ];
 
   services.syncthing.settings.folders = {
