@@ -28,7 +28,7 @@
 
     hypridle
     waybar
-    swww
+    awww
     rofi
 
     nwg-look
