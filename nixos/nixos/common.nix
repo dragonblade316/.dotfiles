@@ -174,6 +174,8 @@
 
     busybox
 
+    helix
+
     rustc
     pixi
     cargo
