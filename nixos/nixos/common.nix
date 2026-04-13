@@ -262,6 +262,13 @@
             silent = true;
             desc = "open neotree";
           }
+          {
+            key = "<leader>gg";
+            mode = ["n"];
+            action = ":Neogit<CR>";
+            silent = true;
+            desc = "open neogit";
+          }
         ];
 
         autocomplete.blink-cmp.enable = true;
@@ -276,13 +283,30 @@
         utility.motion.flash-nvim.enable = true;
         autopairs.nvim-autopairs.enable = true;
 
+        #gitsigns
+        git.git-conflict.enable = true;
+        git.neogit.enable = true;
+
+        telescope = {
+          enable = true;
+          # extensions = [
+          #   {
+          #     name = "fzf";
+          #     packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
+          #     setup = {fzf = {fuzzy = true;};};
+          #   }
+          # ];
+        };
+
         languages = {
+          nix.enable = true;
+          rust.enable = true;
+          markdown.enable = true;
+          clang.enable = true;
+          java.enable = true;
+          python.enable = true;
         };
       };
-
-      vim.languages.rust.enable = true;
-      vim.languages.nix.enable = true;
-      vim.languages.markdown.enable = true;
 
       vim.viAlias = false;
       vim.vimAlias = true;
