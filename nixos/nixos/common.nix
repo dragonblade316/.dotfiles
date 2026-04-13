@@ -315,6 +315,11 @@
         };
 
         languages = {
+          enableTreesitter = true;
+          enableLSP = true;
+          enableFormat = true;
+          enableDAP = true;
+
           nix.enable = true;
           rust.enable = true;
           markdown.enable = true;
