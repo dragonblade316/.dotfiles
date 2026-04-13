@@ -232,12 +232,63 @@
     # Your settings need to go into the settings attribute set
     # most settings are documented in the appendix
     settings = {
+      vim = {
+        theme = {
+          enable = true;
+          name = "dracula";
+          style = "dark";
+        };
+        lineNumberMode = "number";
+
+        keymaps = [
+          {
+            key = "jk";
+            mode = ["i"];
+            action = "<Esc>";
+            silent = true;
+            desc = "New esc keybind";
+          }
+          {
+            key = "<leader>t";
+            mode = ["n"];
+            action = ":Trouble diagnostics toggle";
+            silent = true;
+            desc = "open error list";
+          }
+          {
+            key = "\\";
+            mode = ["n"];
+            action = ":Neotree toggle<CR>";
+            silent = true;
+            desc = "open neotree";
+          }
+        ];
+
+        autocomplete.blink-cmp.enable = true;
+
+        filetree.neo-tree.enable = true;
+
+        clipboard = {
+          enable = true;
+          providers.wl-copy.enable = true;
+        };
+
+        utility.motion.flash-nvim.enable = true;
+        autopairs.nvim-autopairs.enable = true;
+
+        languages = {
+        };
+      };
+
       vim.languages.rust.enable = true;
+      vim.languages.nix.enable = true;
+      vim.languages.markdown.enable = true;
 
       vim.viAlias = false;
       vim.vimAlias = true;
       vim.lsp = {
         enable = true;
+        trouble.enable = true;
       };
     };
   };
