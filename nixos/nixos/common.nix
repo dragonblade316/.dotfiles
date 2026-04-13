@@ -232,6 +232,8 @@
     # Your settings need to go into the settings attribute set
     # most settings are documented in the appendix
     settings = {
+      vim.languages.rust.enable = true;
+
       vim.viAlias = false;
       vim.vimAlias = true;
       vim.lsp = {
