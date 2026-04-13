@@ -269,6 +269,22 @@
             silent = true;
             desc = "open neogit";
           }
+
+          #telescope bindings
+          {
+            key = "<leader>f";
+            mode = ["n"];
+            action = ":Telescope fd<CR>";
+            silent = true;
+            desc = "find files with telescope";
+          }
+          {
+            key = "<leader>/";
+            mode = ["n"];
+            action = ":Telescope live_grep<CR>";
+            silent = true;
+            desc = "find something with telescope";
+          }
         ];
 
         autocomplete.blink-cmp.enable = true;
