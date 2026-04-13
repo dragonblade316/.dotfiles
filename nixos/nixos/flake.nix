@@ -4,6 +4,7 @@
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nvf.url = "github:notashelf/nvf";
     affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
@@ -20,6 +21,7 @@
         # so the old configuration file still takes effect
         ./common.nix
         ./hosts/main
+        inputs.nvf.nixosModules.default
       ];
     };
     nixosConfigurations.cloudjumper = nixpkgs.lib.nixosSystem {

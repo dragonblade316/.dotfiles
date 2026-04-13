@@ -210,12 +210,34 @@
     gst_all_1.gstreamer
     ffmpeg
   ];
+  #
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   withPython3 = true;
+  #   withNodeJs = true;
+  # };
 
-  programs.neovim = {
+  # #nvf config
+  # vim = {
+  #   theme = {
+  #     enable = true;
+  #     name = "dracula";
+  #     style = "dark";
+  #   };
+  # };
+  #
+  programs.nvf = {
     enable = true;
-    defaultEditor = true;
-    withPython3 = true;
-    withNodeJs = true;
+    # Your settings need to go into the settings attribute set
+    # most settings are documented in the appendix
+    settings = {
+      vim.viAlias = false;
+      vim.vimAlias = true;
+      vim.lsp = {
+        enable = true;
+      };
+    };
   };
 
   programs.steam = {
