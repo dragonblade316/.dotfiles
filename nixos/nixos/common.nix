@@ -251,7 +251,7 @@
           {
             key = "<leader>t";
             mode = ["n"];
-            action = ":Trouble diagnostics toggle";
+            action = ":Trouble diagnostics toggle<CR>";
             silent = true;
             desc = "open error list";
           }
