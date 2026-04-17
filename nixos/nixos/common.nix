@@ -334,6 +334,7 @@
       vim.lsp = {
         enable = true;
         trouble.enable = true;
+        mappings.codeAction = "<leader>ca";
       };
     };
   };
