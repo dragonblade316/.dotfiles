@@ -56,11 +56,12 @@
   services.syncthing.settings.folders = {
     "notes" = {
       path = "/home/dragonblade316/Documents/notes/";
-      devices = ["phone" "tablet" "cloudjumper" "services" "docker-services"];
+      # devices = ["phone" "tablet" "cloudjumper" "services" "docker-services"];
+      devices = ["truenas"];
     };
     "Programming" = {
       path = "/home/dragonblade316/Programming/";
-      devices = ["cloudjumper"];
+      devices = ["truenas"];
     };
   };
 
