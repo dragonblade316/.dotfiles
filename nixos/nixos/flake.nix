@@ -32,6 +32,7 @@
         # so the old configuration file still takes effect
         ./common.nix
         ./hosts/laptop
+        inputs.nvf.nixosModules.default
       ];
     };
   };
