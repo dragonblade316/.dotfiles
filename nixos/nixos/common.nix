@@ -326,6 +326,8 @@
           clang.enable = true;
           java.enable = true;
           python.enable = true;
+          dart.enable = true;
+          dart.flutter-tools.enable = true;
         };
       };
 
