@@ -3,6 +3,9 @@
   pkgs,
   ...
 }: {
+  # copy.fail mitigation, until we're on a kernel that has it patched
+  boot.extraModprobeConfig = "install algif_aead /bin/false";
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -328,6 +331,11 @@
           python.enable = true;
           dart.enable = true;
           dart.flutter-tools.enable = true;
+        };
+
+        treesitter = {
+          enable = true;
+          indent.enable = true;
         };
       };
 
