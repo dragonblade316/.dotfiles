@@ -331,6 +331,7 @@
           python.enable = true;
           dart.enable = true;
           dart.flutter-tools.enable = true;
+          julia.enable = true;
         };
 
         treesitter = {
