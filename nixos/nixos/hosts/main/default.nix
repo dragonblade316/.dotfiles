@@ -49,6 +49,7 @@
     android-tools
 
     gimp
+    julia-bin
 
     inputs.affinity-nix.packages.x86_64-linux.v3
   ];
