@@ -53,7 +53,9 @@
 
     julia-bin
 
-    inputs.affinity-nix.packages.x86_64-linux.v3
+    llama-cpp-rocm
+
+    # inputs.affinity-nix.packages.x86_64-linux.v3
   ];
 
   services.syncthing.settings.folders = {
