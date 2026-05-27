@@ -433,6 +433,7 @@
   services = {
     syncthing = {
       enable = true;
+      openDefaultPorts = true;
       # group = "mygroupname";
       user = "dragonblade316";
       dataDir = "/home/dragonblade316/Documents/"; # Default folder for new synced folders
@@ -496,9 +497,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   #for syncthing
-  networking.firewall.allowedTCPPorts = [8384 22000 25565];
-  networking.firewall.allowedUDPPorts = [22000 21027];
-
+  # networking.firewall.allowedTCPPorts = [8384 22000 25565];
+  # networking.firewall.allowedUDPPorts = [22000 21027];
+  #
   swapDevices = [
     {
       device = "/var/lib/swapfile";
