@@ -184,7 +184,7 @@
     cargo
     jetbrains.idea-oss
     python313
-    pipx
+    # pipx
     go
     devenv
 
