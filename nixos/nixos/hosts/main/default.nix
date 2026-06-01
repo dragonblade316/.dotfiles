@@ -54,6 +54,7 @@
     julia-bin
 
     llama-cpp-rocm
+    opencode
 
     # inputs.affinity-nix.packages.x86_64-linux.v3
   ];
