@@ -7,11 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "agent": {
+    "enable_feedback": false,
     "default_model": {
-      "provider": "ollama",
-      "model": "deepseek-coder-v2:16b",
-      "enable_thinking": false
+      "effort": "high",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "enable_thinking": true
     },
     "favorite_models": [],
     "model_parameters": []
