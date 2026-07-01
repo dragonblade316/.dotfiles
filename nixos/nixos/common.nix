@@ -214,7 +214,7 @@
     gst_all_1.gstreamer
     ffmpeg
 
-    zed-editor
+    zed-editor-fhs
   ];
   #
   # programs.neovim = {
