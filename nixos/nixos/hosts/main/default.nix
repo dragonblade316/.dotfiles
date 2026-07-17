@@ -50,13 +50,13 @@
 
     gimp
     krita
+    bottles
 
     julia-bin
 
     llama-cpp-rocm
     opencode
-
-    # inputs.affinity-nix.packages.x86_64-linux.v3
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   services.syncthing.settings.folders = {

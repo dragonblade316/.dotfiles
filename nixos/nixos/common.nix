@@ -125,7 +125,7 @@
   #upackages
   environment.systemPackages = with pkgs; [
     stow
-    vesktop
+    # vesktop
     gh
     git
     gcc

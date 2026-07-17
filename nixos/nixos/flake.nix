@@ -5,7 +5,10 @@
     # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nvf.url = "github:notashelf/nvf";
-    affinity-nix.url = "github:mrshmllow/affinity-nix";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
+    };
   };
 
   outputs = {
