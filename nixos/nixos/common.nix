@@ -189,7 +189,7 @@
     go
     devenv
 
-    heroic
+    heroic-unwrapped
 
     wl-clipboard
 
