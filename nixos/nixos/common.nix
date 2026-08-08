@@ -215,6 +215,8 @@
     ffmpeg
 
     zed-editor-fhs
+
+    webcord
   ];
   #
   # programs.neovim = {
