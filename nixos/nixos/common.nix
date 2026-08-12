@@ -217,6 +217,7 @@
     zed-editor-fhs
 
     webcord
+    kicad
   ];
   #
   # programs.neovim = {
