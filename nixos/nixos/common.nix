@@ -215,6 +215,8 @@
     ffmpeg
 
     zed-editor-fhs
+    codex
+    pi-coding-agent
 
     webcord
     kicad
