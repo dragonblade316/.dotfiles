@@ -216,6 +216,7 @@
 
     zed-editor-fhs
     codex
+    rtk
     pi-coding-agent
 
     webcord
