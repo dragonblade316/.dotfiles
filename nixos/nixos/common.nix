@@ -220,7 +220,6 @@
     pi-coding-agent
 
     webcord
-    equicord
     kicad
   ];
   #
