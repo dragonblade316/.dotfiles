@@ -183,7 +183,6 @@
     rustc
     pixi
     cargo
-    jetbrains.idea-oss
     python313
     # pipx
     go
@@ -207,7 +206,6 @@
 
     google-chrome
     imagemagick
-    hyprpanel
 
     pangolin-cli
 
@@ -328,7 +326,6 @@
 
         languages = {
           enableTreesitter = true;
-          enableLSP = true;
           enableFormat = true;
           enableDAP = true;
 

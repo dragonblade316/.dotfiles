@@ -35,7 +35,6 @@
     nwg-look
     rose-pine-hyprcursor
     hyprpolkitagent
-    hyprpanel
 
     sidequest
     vivaldi
@@ -116,7 +115,7 @@
     openFirewall = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
   virtualisation.vmware.host.enable = true;
   #
   # services.ollama = {
