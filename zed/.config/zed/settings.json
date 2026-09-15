@@ -25,10 +25,9 @@
       "default_config_options": {
         "collaboration_mode": "plan",
         "reasoning_effort": "high"
-      },
-      "type": "registry"
+      }
     }
-  },
+  }
   "agent": {
     "tool_permissions": {
       "tools": {
