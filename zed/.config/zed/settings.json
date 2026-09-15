@@ -7,23 +7,101 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "opencode": {
+      "show_free_models": false,
+      "show_go_models": true,
+      "show_zen_models": false
+    }
+  },
   "edit_predictions": {
     "allow_data_collection": "no"
   },
   "agent_servers": {
-    "opencode": {
+    "pi-acp": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "collaboration_mode": "plan",
+        "reasoning_effort": "high"
+      },
       "type": "registry"
     }
   },
   "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^sed\\b"
+            },
+            {
+              "pattern": "^head\\b"
+            },
+            {
+              "pattern": "^find\\s+\\~/\\.cargo/registry/src/index\\.crates\\.io-1949cf8c6b5b557f/cu29-traits-1\\.0\\.0(\\s|$)"
+            },
+            {
+              "pattern": "^xargs\\s+grep(\\s|$)"
+            },
+            {
+              "pattern": "^ls\\s+\\~/\\.cargo/registry/src/\\*/cu29-1\\.0\\.0/src/(\\s|$)"
+            },
+            {
+              "pattern": "^ls\\b"
+            },
+            {
+              "pattern": "^cargo\\s+build(\\s|$)"
+            },
+            {
+              "pattern": "^tail\\b"
+            },
+            {
+              "pattern": "^udevadm\\s+info(\\s|$)"
+            }
+          ]
+        },
+        "fetch": {
+          "always_allow": [
+            {
+              "pattern": "^https?://docs\\.rs"
+            },
+            {
+              "pattern": "^https?://github\\.com"
+            },
+            {
+              "pattern": "^https?://crates\\.io"
+            },
+            {
+              "pattern": "^https?://raw\\.githubusercontent\\.com"
+            },
+            {
+              "pattern": "^https?://api\\.github\\.com"
+            }
+          ]
+        }
+      }
+    },
     "enable_feedback": false,
     "default_model": {
-      "effort": "high",
-      "provider": "deepseek",
-      "model": "deepseek-v4-flash",
+      "effort": "xhigh",
+      "provider": "opencode",
+      "model": "go/deepseek-v4-pro",
       "enable_thinking": true
     },
-    "favorite_models": [],
+    "favorite_models": [
+      {
+        "provider": "opencode",
+        "model": "go/deepseek-v4-pro",
+        "enable_thinking": true,
+        "effort": "xhigh"
+      }
+    ],
     "model_parameters": []
   },
   "proxy": "",
@@ -34,7 +112,7 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
     "dark": "Dracula",
   },
