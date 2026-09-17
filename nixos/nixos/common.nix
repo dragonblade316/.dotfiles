@@ -128,6 +128,7 @@
     # vesktop
     gh
     git
+    jujutsu
     gcc
     kitty
     distrobox
@@ -154,7 +155,6 @@
     docker-compose # start group of containers for dev
 
     alejandra
-    # blender-hip
 
     pulseaudio
     playerctl
@@ -178,14 +178,9 @@
 
     busybox
 
-    helix
-
     rustc
-    pixi
     cargo
     python313
-    # pipx
-    go
     devenv
 
     heroic-unwrapped
