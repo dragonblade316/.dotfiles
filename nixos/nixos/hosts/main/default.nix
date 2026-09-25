@@ -57,6 +57,8 @@
     opencode
     pi-coding-agent
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    opentabletdriver
   ];
 
   services.syncthing.settings.folders = {
