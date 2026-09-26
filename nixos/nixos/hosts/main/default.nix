@@ -132,4 +132,9 @@
     package = pkgs.llama-cpp-rocm;
     openFirewall = true;
   };
+
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 }
