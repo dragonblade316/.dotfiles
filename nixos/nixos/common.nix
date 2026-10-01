@@ -201,6 +201,7 @@
 
     google-chrome
     imagemagick
+    qpwgraph
 
     pangolin-cli
 

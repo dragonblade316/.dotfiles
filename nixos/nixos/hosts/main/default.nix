@@ -82,7 +82,7 @@
     "/home/dragonblade316/Videos"
     "/home/dragonblade316/.dotfiles"
     "/home/dragonblade316/Music"
-    "/home/dragonblade316/Programming"
+    "/home/dragonblade316/Progects"
     "/home/dragonblade316/Downloads"
   ];
   services.restic.backups.toothless_backup.exclude = [
