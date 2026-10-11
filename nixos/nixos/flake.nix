@@ -9,6 +9,10 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -25,6 +29,7 @@
         ./common.nix
         ./hosts/main
         inputs.nvf.nixosModules.default
+        inputs.nix-craftapps.nixosModules.default
       ];
     };
     nixosConfigurations.cloudjumper = nixpkgs.lib.nixosSystem {
