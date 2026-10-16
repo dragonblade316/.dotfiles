@@ -414,7 +414,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/dragonblade316/nixos";
+    flake = "/home/dragonblade316/.dotfiles/nixos/nixos";
   };
 
   virtualisation.containers.enable = true;
