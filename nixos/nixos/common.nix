@@ -216,153 +216,144 @@
     webcord
     kicad
   ];
-  #
-  # programs.neovim = {
-  #   enable = true;
-  #   defaultEditor = true;
-  #   withPython3 = true;
-  #   withNodeJs = true;
-  # };
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    withPython3 = true;
+    withNodeJs = true;
+  };
 
   # #nvf config
-  # vim = {
-  #   theme = {
-  #     enable = true;
-  #     name = "dracula";
-  #     style = "dark";
+  # programs.nvf = {
+  #   enable = true;
+  #   # Your settings need to go into the settings attribute set
+  #   # most settings are documented in the appendix
+  #   settings = {
+  #     vim = {
+  #       theme = {
+  #         enable = true;
+  #         name = "dracula";
+  #         style = "dark";
+  #       };
+  #       lineNumberMode = "number";
+  #
+  #       keymaps = [
+  #         {
+  #           key = "jk";
+  #           mode = ["i"];
+  #           action = "<Esc>";
+  #           silent = true;
+  #           desc = "New esc keybind";
+  #         }
+  #         {
+  #           key = "<leader>t";
+  #           mode = ["n"];
+  #           action = ":Trouble diagnostics toggle<CR>";
+  #           silent = true;
+  #           desc = "open error list";
+  #         }
+  #         {
+  #           key = "\\";
+  #           mode = ["n"];
+  #           action = ":Neotree toggle<CR>";
+  #           silent = true;
+  #           desc = "open neotree";
+  #         }
+  #         {
+  #           key = "<leader>gg";
+  #           mode = ["n"];
+  #           action = ":Neogit<CR>";
+  #           silent = true;
+  #           desc = "open neogit";
+  #         }
+  #
+  #         #telescope bindings
+  #         {
+  #           key = "<leader>f";
+  #           mode = ["n"];
+  #           action = ":Telescope fd<CR>";
+  #           silent = true;
+  #           desc = "find files with telescope";
+  #         }
+  #         {
+  #           key = "<leader>/";
+  #           mode = ["n"];
+  #           action = ":Telescope live_grep<CR>";
+  #           silent = true;
+  #           desc = "find something with telescope";
+  #         }
+  #       ];
+  #
+  #       autocomplete.blink-cmp.enable = true;
+  #
+  #       filetree.neo-tree.enable = true;
+  #
+  #       clipboard = {
+  #         enable = true;
+  #         providers.wl-copy.enable = true;
+  #       };
+  #
+  #       utility.motion.flash-nvim.enable = true;
+  #       autopairs.nvim-autopairs.enable = true;
+  #
+  #       #gitsigns
+  #       git.git-conflict.enable = true;
+  #       git.neogit.enable = true;
+  #
+  #       telescope = {
+  #         enable = true;
+  #         # extensions = [
+  #         #   {
+  #         #     name = "fzf";
+  #         #     packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
+  #         #     setup = {fzf = {fuzzy = true;};};
+  #         #   }
+  #         # ];
+  #       };
+  #
+  #       languages = {
+  #         enableTreesitter = true;
+  #         enableFormat = true;
+  #         enableDAP = true;
+  #
+  #         nix.enable = true;
+  #         rust.enable = true;
+  #         markdown.enable = true;
+  #         clang.enable = true;
+  #         java.enable = true;
+  #         python.enable = true;
+  #         dart.enable = true;
+  #         dart.flutter-tools.enable = true;
+  #         julia.enable = true;
+  #       };
+  #
+  #       treesitter = {
+  #         enable = true;
+  #         indent.enable = true;
+  #       };
+  #
+  #       options = {
+  #         #Indent
+  #         tabstop = 2; # 2 spaces for tabs (prettier default)
+  #         shiftwidth = 2; # 2 spaces for indent width
+  #         expandtab = true; # expand tab to spaces
+  #         autoindent = true; # copy indent from current line when starting new one
+  #         copyindent = true;
+  #         smartindent = true;
+  #         preserveindent = true;
+  #       };
+  #     };
+  #
+  #     vim.viAlias = false;
+  #     vim.vimAlias = true;
+  #     vim.lsp = {
+  #       enable = true;
+  #       trouble.enable = true;
+  #       mappings.codeAction = "<leader>ca";
+  #     };
   #   };
   # };
   #
-  programs.nvf = {
-    enable = true;
-    # Your settings need to go into the settings attribute set
-    # most settings are documented in the appendix
-    settings = {
-      vim = {
-        theme = {
-          enable = true;
-          name = "dracula";
-          style = "dark";
-        };
-        lineNumberMode = "number";
-
-        keymaps = [
-          {
-            key = "jk";
-            mode = ["i"];
-            action = "<Esc>";
-            silent = true;
-            desc = "New esc keybind";
-          }
-          {
-            key = "<leader>t";
-            mode = ["n"];
-            action = ":Trouble diagnostics toggle<CR>";
-            silent = true;
-            desc = "open error list";
-          }
-          {
-            key = "\\";
-            mode = ["n"];
-            action = ":Neotree toggle<CR>";
-            silent = true;
-            desc = "open neotree";
-          }
-          {
-            key = "<leader>gg";
-            mode = ["n"];
-            action = ":Neogit<CR>";
-            silent = true;
-            desc = "open neogit";
-          }
-
-          #telescope bindings
-          {
-            key = "<leader>f";
-            mode = ["n"];
-            action = ":Telescope fd<CR>";
-            silent = true;
-            desc = "find files with telescope";
-          }
-          {
-            key = "<leader>/";
-            mode = ["n"];
-            action = ":Telescope live_grep<CR>";
-            silent = true;
-            desc = "find something with telescope";
-          }
-        ];
-
-        autocomplete.blink-cmp.enable = true;
-
-        filetree.neo-tree.enable = true;
-
-        clipboard = {
-          enable = true;
-          providers.wl-copy.enable = true;
-        };
-
-        utility.motion.flash-nvim.enable = true;
-        autopairs.nvim-autopairs.enable = true;
-
-        #gitsigns
-        git.git-conflict.enable = true;
-        git.neogit.enable = true;
-
-        telescope = {
-          enable = true;
-          # extensions = [
-          #   {
-          #     name = "fzf";
-          #     packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
-          #     setup = {fzf = {fuzzy = true;};};
-          #   }
-          # ];
-        };
-
-        languages = {
-          enableTreesitter = true;
-          enableFormat = true;
-          enableDAP = true;
-
-          nix.enable = true;
-          rust.enable = true;
-          markdown.enable = true;
-          clang.enable = true;
-          java.enable = true;
-          python.enable = true;
-          dart.enable = true;
-          dart.flutter-tools.enable = true;
-          julia.enable = true;
-        };
-
-        treesitter = {
-          enable = true;
-          indent.enable = true;
-        };
-
-        options = {
-          #Indent
-          tabstop = 2; # 2 spaces for tabs (prettier default)
-          shiftwidth = 2; # 2 spaces for indent width
-          expandtab = true; # expand tab to spaces
-          autoindent = true; # copy indent from current line when starting new one
-          copyindent = true;
-          smartindent = true;
-          preserveindent = true;
-        };
-      };
-
-      vim.viAlias = false;
-      vim.vimAlias = true;
-      vim.lsp = {
-        enable = true;
-        trouble.enable = true;
-        mappings.codeAction = "<leader>ca";
-      };
-    };
-  };
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
