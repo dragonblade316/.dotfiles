@@ -1,15 +1,16 @@
 set -e
 pushd ~/.dotfiles/nixos/nixos/
-git pull
+jj git fetch --remote origin
+jj rebase --branch @ --onto main@origin
 nvim .
 alejandra . &>/dev/null
-git diff -U0 *.nix
+jj diff --git --context 0 *.nix
 echo "NixOS rebuilding"
 nh os switch ~/.dotfiles/nixos/nixos
 #need to add logging and better errors
 
 gen=$(nh os info | grep "current")
-git add .
-git commit -m "$gen"
-git push
+jj commit -m "$gen" .
+jj bookmark set main --revision @-
+jj git push --bookmark main
 popd
