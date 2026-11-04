@@ -36,7 +36,7 @@
     rose-pine-hyprcursor
     hyprpolkitagent
 
-    sidequest
+    # sidequest
     vivaldi
 
     godot
@@ -57,6 +57,8 @@
     opencode
     pi-coding-agent
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    intellij-idea
+    vscode-fhs
 
     opentabletdriver
   ];
@@ -118,7 +120,7 @@
   };
 
   # virtualisation.virtualbox.host.enable = true;
-  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.enable = true;
   #
   # services.ollama = {
   #   enable = true;

@@ -214,6 +214,7 @@
     pi-coding-agent
 
     webcord
+    vesktop
     kicad
   ];
   programs.neovim = {
