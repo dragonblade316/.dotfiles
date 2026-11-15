@@ -106,6 +106,11 @@
     iptables -A INPUT -p udp -s 224.0.0.0/4 -j ACCEPT
   '';
 
+  services.earlyoom = {
+    enable = true;
+    enableNotifications = true;
+  };
+
   #keeping this around so the udev rules are set. sdeck-ui is not currently used
   programs.streamdeck-ui = {
     enable = true;
