@@ -60,6 +60,8 @@
     intellij-idea
     vscode-fhs
 
+    rpi-imager
+
     opentabletdriver
   ];
 
