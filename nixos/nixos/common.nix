@@ -445,6 +445,8 @@
     };
   };
 
+  security.polkit.enable = true;
+
   services.netbird = {
     enable = false;
     ui.enable = true;
